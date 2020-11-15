@@ -17,7 +17,7 @@ class SupplierController extends Controller{
 		$supplier->alamat = request ('alamat');
 		$supplier->save();
 			
-			return redirect('supplier')->with('success','Data Berhasil Ditambahkan');
+			return redirect('admin/supplier')->with('success','Data Berhasil Ditambahkan');
 		
 	}
 	function show(Supplier $supplier){
@@ -35,12 +35,12 @@ class SupplierController extends Controller{
 		$supplier->alamat = request ('alamat');
 		$supplier->save();
 			
-		return redirect('supplier')->with('success','Data Berhasil Diedit');
+		return redirect('admin/supplier')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(Supplier $supplier){
 		$supplier->delete();
 
-		return redirect('supplier')->with('danger','Data Berhasil Dihapus');
+		return redirect('admin/supplier')->with('danger','Data Berhasil Dihapus');
 
 	}
 }

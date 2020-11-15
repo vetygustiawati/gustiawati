@@ -9,7 +9,7 @@
 					Tambah Data Supplier
 					</div>
 					<div class="card-body">
-					<form action="{{url('supplier')}}" method="post">
+					<form action="{{url('admin/supplier')}}" method="post">
 						@csrf
 					
 					<div class="form-group">

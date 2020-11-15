@@ -10,7 +10,7 @@
 						Ubah Data Supplier
 					</div>
 						<div class="card-body">
-							<form action="{{url('supplier', $supplier->id)}}" method="post">
+							<form action="{{url('admin/supplier', $supplier->id)}}" method="post">
 							@csrf
 							@method("PUT")
 							<div class="form-group">

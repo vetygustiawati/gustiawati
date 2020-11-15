@@ -7,7 +7,7 @@
 			<div class="card">
 				<div class="card-header">
 					Data Supplier
-					<a href="{{url('supplier/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<a href="{{url('admin/supplier/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i>Tambah Data</a>
 				</div>
 				<div class="card-body">
 					<table class="table">
@@ -24,9 +24,9 @@
 										<td>{{$loop->iteration}}</td>
 										<td>
 											<div class="btn-group">
-											<a href="{{url('supplier', $supplier->id)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
-											<a href="{{url('supplier', $supplier->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-											@include('admin.utils.delete', ['url' => url('supplier', $supplier->id)])
+											<a href="{{url('admin/supplier', $supplier->id)}}"class="btn btn-dark"> <i class="fa fa-info"></i></a>
+											<a href="{{url('admin/supplier', $supplier->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+											@include('admin.utils.delete', ['url' => url('admin/supplier', $supplier->id)])
 											</div>
 										</td>
 										<td>{{$supplier->nama}}</td>

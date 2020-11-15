@@ -15,7 +15,7 @@ class KategoriController extends Controller{
 		$kategori->nama = request ('nama');
 		$kategori->save();
 			
-			return redirect('kategori')->with('success','Data Berhasil Ditambahkan');
+			return redirect('admin/kategori')->with('success','Data Berhasil Ditambahkan');
 		
 	}
 	function show(Kategori $kategori){
@@ -31,12 +31,12 @@ class KategoriController extends Controller{
 		$kategori->nama = request ('nama');
 		$kategori->save();
 			
-		return redirect('kategori')->with('success','Data Berhasil Diedit');
+		return redirect('admin/kategori')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(Kategori $kategori){
 		$kategori->delete();
 
-		return redirect('kategori')->with('danger','Data Berhasil Dihapus');
+		return redirect('admin/kategori')->with('danger','Data Berhasil Dihapus');
 
 	}
 }

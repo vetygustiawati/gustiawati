@@ -9,7 +9,7 @@
 					Tambah Data Pelanggan
 					</div>
 					<div class="card-body">
-					<form action="{{url('pelanggan')}}" method="post">
+					<form action="{{url('admin/pelanggan')}}" method="post">
 						@csrf
 					
 					<div class="form-group">

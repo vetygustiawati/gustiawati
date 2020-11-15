@@ -20,29 +20,30 @@
                                 
                             </li>
                             <li class="nav-item ">
-                                <a href="{{url('produk')}}" class="nav-link"><span class="fa-home fa"></span> Produk</a>
+                                <a href="{{url('admin/produk')}}" class="nav-link"><span class="fa-home fa"></span> Produk</a>
                                 
                             </li>
                             <li class="nav-item ">
-                                <a href="{{url('kategori')}}" class="nav-link"><span class="fa-home fa"></span> Kategori</a>
+                                <a href="{{url('admin/kategori')}}" class="nav-link"><span class="fa-home fa"></span> Kategori</a>
                                 
                             </li>
                             <li class="nav-item ">
-                                <a href="{{url('login')}}" class="nav-link"><span class="fa-home fa"></span> Logout</a>
+                                <a href="{{url('admin/user')}}" class="nav-link"><span class="fa-home fa"></span> User</a>
                                 
                             </li>
+                            
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Master Data Penjualan</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+                                            <a class="nav-link" href="{{url('admin/pelanggan')}}">Pelanggan</a>
                                         </li>
                                         
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{url('supplier')}}">Supplier</a>
+                                            <a class="nav-link" href="{{url('admin/supplier')}}">Supplier</a>
                                         </li>
                                     </ul>
                                 </div>

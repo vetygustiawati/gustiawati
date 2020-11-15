@@ -17,7 +17,7 @@ class PelangganController extends Controller{
 		$pelanggan->alamat = request ('alamat');
 		$pelanggan->save();
 			
-			return redirect('pelanggan')->with('success','Data Berhasil Ditambahkan');
+			return redirect('admin/pelanggan')->with('success','Data Berhasil Ditambahkan');
 		
 	}
 	function show(Pelanggan $pelanggan){
@@ -35,12 +35,12 @@ class PelangganController extends Controller{
 		$pelanggan->alamat = request ('alamat');
 		$pelanggan->save();
 			
-		return redirect('pelanggan')->with('success','Data Berhasil Diedit');
+		return redirect('admin/pelanggan')->with('success','Data Berhasil Diedit');
 	}
 	function destroy(Pelanggan $pelanggan){
 		$pelanggan->delete();
 
-		return redirect('pelanggan')->with('danger','Data Berhasil Dihapus');
+		return redirect('admin/pelanggan')->with('danger','Data Berhasil Dihapus');
 
 	}
 }
