@@ -44,4 +44,10 @@ class UserController extends Controller{
 		return redirect('admin/user')->with('danger','Data Berhasil Dihapus');
 
 	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_user'] = User::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('user.index', $data);
+	}
 }

@@ -42,6 +42,11 @@ Route::get('kategori2', [HomeClientController::class, 'showKategori2']);
 Route::get('login2', [HomeClientController::class, 'showLogin2']);
 
 Route::prefix('admin')->middleware('auth')->group(function(){
+	Route::post('produk/filter', [ProdukController::class, 'filter']);
+	Route::post('kategori/filter', [KategoriController::class, 'filter']);
+	Route::post('pelanggan/filter', [PelangganController::class, 'filter']);
+	Route::post('supplier/filter', [SupplierController::class, 'filter']);
+	Route::post('user/filter', [UserController::class, 'filter']);
 	Route::resource('produk', ProdukController::class);
 	Route::resource('kategori', KategoriController::class);
 	Route::resource('pelanggan', PelangganController::class);

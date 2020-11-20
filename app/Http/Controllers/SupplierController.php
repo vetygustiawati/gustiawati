@@ -43,4 +43,10 @@ class SupplierController extends Controller{
 		return redirect('admin/supplier')->with('danger','Data Berhasil Dihapus');
 
 	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_supplier'] = Supplier::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('supplier.index', $data);
+	}
 }

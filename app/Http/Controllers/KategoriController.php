@@ -39,4 +39,10 @@ class KategoriController extends Controller{
 		return redirect('admin/kategori')->with('danger','Data Berhasil Dihapus');
 
 	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_kategori'] = Kategori::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('kategori.index', $data);
+	}
 }

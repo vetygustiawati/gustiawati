@@ -43,4 +43,10 @@ class PelangganController extends Controller{
 		return redirect('admin/pelanggan')->with('danger','Data Berhasil Dihapus');
 
 	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_pelanggan'] = Pelanggan::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('pelanggan.index', $data);
+	}
 }

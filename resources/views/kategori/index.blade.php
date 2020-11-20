@@ -6,6 +6,21 @@
 		<div class="col-md-12 mt-5">
 			<div class="card">
 				<div class="card-header">
+					Filter
+				</div>
+				<div class="card-body">
+					<form action="{{url('admin/kategori/filter')}}" method="post">
+						@csrf
+						<div class="form-group">
+							<label for="" class="control-label">Nama</label>
+						<input type="text" class="form-control" name="nama" value="{{$nama ??""}}">
+						</div>
+						<button class="btn btn-dark float-right"><i class="fa fa-search"></i> Filter</button>
+					</form>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
 					Data Kategori
 					<a href="{{url('admin/kategori/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i>Tambah Data</a>
 				</div>
