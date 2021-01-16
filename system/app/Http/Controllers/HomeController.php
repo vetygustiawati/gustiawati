@@ -31,9 +31,28 @@ class HomeController extends Controller{
 	function testCollection(){
 		$list_bike = ['Honda', 'Yamaha', 'Kawasaki', 'Suzuki', 'Vespa', 'BMW', 'KTM'];
 
-		$collection = collect($list_bike);
+		$list_bike = collect($list_bike);
 		$list_produk = Produk::all();
-		dd($collection->count());
-		dd($list_bike, $collection, $list_produk);
+
+		// sorting
+		// sort by harga terendah
+		// dd($list_produk->sortBy('harga'));
+
+		// sort by harga tertinggi
+		// dd($list_produk->sortByDesc('harga'));
+		
+	// filter
+		// $filtered = $list_produk->filter(function($item){
+		// 	return $item->harga > 12000;
+		// });
+		// dd($filtered);
+
+		// $sum = $list_produk->average('harga');
+		// dd($sum);
+
+		$data['list'] = Produk::Paginate(15);
+		return view('test-collection', $data);
+		
+		dd($list_bike, $list_produk);
 	}
 }
